@@ -45,23 +45,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String num2 = second.getText().toString();
         switch (view.getId()) {
             case R.id.btnAdd:
-                int addition = Integer.parseInt(num1) + Integer.parseInt(num2);
+                float addition = Float.parseFloat(num1) + Float.parseFloat(num2);
                 result.setText(String.valueOf(addition));
                 break;
             case R.id.btnsubstract:
-                int subtraction = Integer.parseInt(num1) - Integer.parseInt(num2);
+                float subtraction = Float.parseFloat(num1) - Float.parseFloat(num2);
                 result.setText(String.valueOf(subtraction));
                 break;
             case R.id.btnDivide:
                 try {
-                    int division = Integer.parseInt(num1) / Integer.parseInt(num2);
+                    float division = Float.parseFloat(num1) / Float.parseFloat(num2);
                     result.setText(String.valueOf(division));
                 } catch (Exception e) {
                     result.setText("Cannot DIVIDE!");
                 }
                 break;
             case R.id.btnMultiply:
-                int multiply = Integer.parseInt(num2) * Integer.parseInt(num1);
+                float multiply = Float.parseFloat(num2) * Float.parseFloat(num1);
                 result.setText(String.valueOf(multiply));
                 break;
 
