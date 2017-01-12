@@ -45,7 +45,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First number"
+        android:text="Pierwsza liczba"
         android:id="@+id/textView2"
         android:layout_below="@+id/first"
         android:layout_alignParentStart="true" />
@@ -64,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second number"
+        android:text="Druga liczba"
         android:id="@+id/textView3"
         android:layout_marginTop="12dp"
         android:layout_below="@+id/second"
@@ -101,5 +101,19 @@
         android:layout_below="@+id/btnsubstract"
         android:layout_alignParentStart="true"
         android:textAllCaps="false" />
+
+    <TextView
+        android:text="Wynik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:layout_alignBottom="@+id/second"
+        android:layout_alignEnd="@+id/result"
+        android:layout_alignTop="@+id/second"
+        android:layout_toEndOf="@+id/second"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp" />
 
 </RelativeLayout>
