@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static java.lang.Math.pow;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result.setText(String.valueOf(multiply));
                 break;
             case R.id.btnpot:
-                double powpow = Math.pow(num1,num2);
+                double Math.pow(double)num1,(double)num2);
                 result.setText(String.valueOf(power));
                 break;
 
