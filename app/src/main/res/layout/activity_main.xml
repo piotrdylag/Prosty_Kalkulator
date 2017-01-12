@@ -82,7 +82,7 @@
         android:layout_alignBottom="@+id/second"
         android:layout_toEndOf="@+id/btnsubstract"
         android:layout_marginBottom="32dp"
-        android:numeric="integer|decimal" />
+        android:numeric="integer" />
 
     <EditText
         android:layout_width="wrap_content"
