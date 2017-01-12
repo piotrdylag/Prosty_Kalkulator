@@ -7,9 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnAdd, btnsub, btndivide, btnmul;
+
+    private Button btnAdd, btnsub, btndivide, btnmul, btnpot;
     private TextView result;
     private EditText first, second;
 
@@ -29,15 +31,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         first = (EditText) findViewById(R.id.first);
         second = (EditText) findViewById(R.id.second);
         result = (TextView) findViewById(R.id.result);
+        btnpot = (Button) findViewById(R.id.btnpot);
 
 
         btnAdd.setOnClickListener(this);
         btnsub.setOnClickListener(this);
         btndivide.setOnClickListener(this);
         btnmul.setOnClickListener(this);
+        btnpot.setOnClickListener(this);
 
 
     }
+
 
     @Override
     public void onClick(View view) {
@@ -64,9 +69,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 float multiply = Float.parseFloat(num2) * Float.parseFloat(num1);
                 result.setText(String.valueOf(multiply));
                 break;
-
+            case R.id.btnpot:
+                double powpow = Math.pow(num1,num2);
+                result.setText(String.valueOf(power));
+                break;
 
 
         }
     }
+
+
+
 }
+
