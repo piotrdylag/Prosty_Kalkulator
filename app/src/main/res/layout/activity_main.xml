@@ -70,20 +70,6 @@
         android:layout_below="@+id/second"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/result"
-        android:textColor="#ff0000"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="28dp"
-        android:layout_alignBottom="@+id/second"
-        android:layout_toEndOf="@+id/btnsubstract"
-        android:layout_marginBottom="32dp"
-        android:numeric="integer" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -107,13 +93,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:layout_marginEnd="15dp"
         android:textSize="14sp"
         android:layout_alignBottom="@+id/second"
-        android:layout_alignEnd="@+id/result"
         android:layout_alignTop="@+id/second"
-        android:layout_toEndOf="@+id/second"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/btnDivide" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/result"
+        android:textColor="#ff0000"
+        android:numeric="integer"
+        android:background="?attr/editTextBackground"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="53dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginStart="78dp" />
 
 </RelativeLayout>
