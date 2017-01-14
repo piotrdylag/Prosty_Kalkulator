@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -87,8 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result.setText(String.valueOf(percentage));
                 break;
             case R.id.btnpi:
-                double pi = Math.PI;
-                result.setText(String.valueOf(pi));
+                result.setText("" + Math.PI);
                 break;
 
 
