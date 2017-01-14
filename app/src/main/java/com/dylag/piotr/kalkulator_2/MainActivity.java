@@ -106,9 +106,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 
-                double num1 = Double.parseDouble(first.getText().toString());
-                double num2 = Double.parseDouble(second.getText().toString());
-
                 double pi = 3.14;
 
                 result.setText(String.valueOf(pi));
