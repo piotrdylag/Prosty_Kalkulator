@@ -114,4 +114,20 @@
         android:layout_toEndOf="@+id/textView2"
         android:layout_marginStart="78dp" />
 
+    <Button
+        android:text="%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnsubstract"
+        android:layout_toEndOf="@+id/btnpot"
+        android:id="@+id/btnper" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnMultiply"
+        android:layout_toEndOf="@+id/btnper"
+        android:id="@+id/btnpi"
+        android:text="π" />
+
 </RelativeLayout>

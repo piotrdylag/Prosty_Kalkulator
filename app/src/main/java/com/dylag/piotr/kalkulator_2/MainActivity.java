@@ -1,21 +1,21 @@
 package com.dylag.piotr.kalkulator_2;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static java.lang.Math.pow;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private Button btnAdd, btnsub, btndivide, btnmul, btnpot;
+    private Button btnAdd, btnsub, btndivide, btnmul, btnpot, btnper, btnpi;
     private TextView result;
     private EditText first, second;
+
 
 
     @Override
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         second = (EditText) findViewById(R.id.second);
         result = (TextView) findViewById(R.id.result);
         btnpot = (Button) findViewById(R.id.btnpot);
+        btnper = (Button) findViewById(R.id.btnper);
+        btnpi = (Button) findViewById(R.id.btnpi);
+
 
 
         btnAdd.setOnClickListener(this);
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btndivide.setOnClickListener(this);
         btnmul.setOnClickListener(this);
         btnpot.setOnClickListener(this);
+        btnper.setOnClickListener(this);
+        btnpi.setOnClickListener(this);
+
 
 
     }
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         double num1 = Double.parseDouble(first.getText().toString());
         double num2 = Double.parseDouble(second.getText().toString());
+
         switch (view.getId()) {
             case R.id.btnAdd:
                 double addition = num1 + num2;
@@ -75,6 +82,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                double power = Math.pow(num1, num2);
                 result.setText(String.valueOf(power));
                 break;
+            case R.id.btnper:
+                double percentage = (num1/100) * num2;
+                result.setText(String.valueOf(percentage));
+                break;
+            case R.id.btnpi:
+                double pi = Math.PI;
+                result.setText(String.valueOf(pi));
+                break;
+
 
 
         }
