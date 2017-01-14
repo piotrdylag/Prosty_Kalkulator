@@ -2,6 +2,7 @@ package com.dylag.piotr.kalkulator_2;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnAdd, btnsub, btndivide, btnmul, btnpot, btnper, btnpi;
     private TextView result;
     private EditText first, second;
+    private String className = "MainActivity";
 
 
 
@@ -40,14 +42,78 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        btnAdd.setOnClickListener(this);
-        btnsub.setOnClickListener(this);
-        btndivide.setOnClickListener(this);
-        btnmul.setOnClickListener(this);
-        btnpot.setOnClickListener(this);
-        btnper.setOnClickListener(this);
-        btnpi.setOnClickListener(this);
 
+
+        btnAdd.setOnClickListener( new MyClickListener());
+        btnsub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d( className,"Kliknięto odejmowanie");
+            }
+        });
+        btndivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                double num1 = Double.parseDouble(first.getText().toString());
+                double num2 = Double.parseDouble(second.getText().toString());
+
+                try {
+                    double division = num1 / num2;
+                    result.setText(String.valueOf(division));
+                } catch (Exception e) {
+                    result.setText("Cannot DIVIDE!");
+                }
+
+            }
+        });
+        btnmul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(first.getText().toString());
+                double num2 = Double.parseDouble(second.getText().toString());
+
+                double multiply = num1 * num2;
+                result.setText(String.valueOf(multiply));
+
+            }
+        });
+        btnpot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(first.getText().toString());
+                double num2 = Double.parseDouble(second.getText().toString());
+
+                double power = Math.pow(num1, num2);
+                result.setText(String.valueOf(power));
+
+            }
+        });
+        btnper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(first.getText().toString());
+                double num2 = Double.parseDouble(second.getText().toString());
+
+                double percentage = (num1/100) * num2;
+                result.setText(String.valueOf(percentage));
+
+
+
+            }
+        });
+        btnpi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                double num1 = Double.parseDouble(first.getText().toString());
+                double num2 = Double.parseDouble(second.getText().toString());
+
+                double pi = 3.14;
+
+                result.setText(String.valueOf(pi));
+            }
+            });
 
 
     }
@@ -87,9 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 double percentage = (num1/100) * num2;
                 result.setText(String.valueOf(percentage));
                 break;
-            case R.id.btnpi:
-                result.setText("" + Math.PI);
-                break;
+
 
 
 
