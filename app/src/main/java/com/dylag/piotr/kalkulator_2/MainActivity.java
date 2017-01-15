@@ -44,7 +44,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        btnAdd.setOnClickListener( new MyClickListener());
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                double num1 = Double.parseDouble(first.getText().toString());
+                double num2 = Double.parseDouble(second.getText().toString());
+
+                double addition = num1 + num2;
+                result.setText(String.valueOf(addition));
+            }
+        });
         btnsub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
